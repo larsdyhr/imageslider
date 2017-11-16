@@ -1,0 +1,12 @@
+tt_content.dycon_carousel = FLUIDTEMPLATE
+tt_content.dycon_carousel {
+	# templateName is for TYPO3 7 >
+    # templateName = DyconCarousel
+    # file is supported in all version (6,7,8), just does not support different formats:
+    file = EXT:dycon_carousel/Resources/Private/Templates/DyconCarousel.html
+    templateRootPaths.10 = EXT:dycon_carousel/Resources/Private/Templates/
+    partialRootPaths.10 = EXT:dycon_carousel/Resources/Private/Partials/
+    layoutRootPaths.10 = EXT:dycon_carousel/Resources/Private/Layouts/
+    # This is not supported in TYPO3 6. So we just use the ordinary controller:extbase.controllerName and extbase.controllerAction (if necessary)
+    # dataProcessing.10 = Dycon\DyconCarousel\DataProcessing\FlexFormProcessor
+}

@@ -1,0 +1,18 @@
+{namespace dycon = Dycon\DyconCarousel\ViewHelpers}
+    <div class="valign">
+        <div class="carousel-text vcontainer lead"{f:if(condition: data.text_color,then: 'style="color: {data.text_color};"')}>
+        <h{item.header_layout}>{item.header}</h{item.header_layout}>
+        <f:format.html>{item.bodytext}</f:format.html>
+    </div>
+    <div class="carousel-image vcontainer">
+        <dycon:fal data="{item}" as="images" table="tt_content">
+            <f:for each="{images}" as="image">
+                <a class="dyconcarousel{item.uid}" title="{image.title}" alt="{image.alternative}" href="<f:uri.image src='{image.publicUrl}' width='{item.imagewidth}' height='{item.imageheight}c' />">{image.title}</a>
+            </f:for>
+        </dycon:fal>
+    </div>
+<f:comment>
+    <f:image src="{image.publicUrl}" class="dyconcarousel{item.uid}" title="{image.title}" alt="{image.alternative}" width="{item.imagewidth}" height="{item.imageheight}c" />
+    <a class="dyconcarousel{item.uid}" href="{f:uri.image(image: image,width:item.imagewidth,height=item.imageheight'c')}">{image.title}</a>
+
+</f:comment>
