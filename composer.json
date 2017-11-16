@@ -1,6 +1,7 @@
 {
   "name": "dycon/dycon_carousel",
   "type": "typo3-cms-extension",
+  "license": "MIT",
   "description": "image Carousel and slider",
   "require": {
     "php": ">=5.4.0",
