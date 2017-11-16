@@ -4,62 +4,75 @@
         <langDisable>1</langDisable>
         <noteToSelf>Flexform does not handle FAL fields correct (until TYPO3 vers. 8). So using the existing fields. : https://forge.typo3.org/issues/68045</noteToSelf>
     </meta>
-    <sheets>
-        <sDEF>
-            <ROOT>
+    <ROOT>
+        <TCEforms>
+            <sheetTitle>LLL:EXT:dycon_carousel/Resources/Private/Language/locallang.xlf:settings</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+            <settings.interval>
                 <TCEforms>
-                    <sheetTitle>LLL:EXT:dycon_carousel/Resources/Private/Language/Backend.xlf:settings</sheetTitle>
+                    <label>LLL:EXT:dycon_carousel/Resources/Private/Language/locallang.xlf:carousel.interval
+                    </label>
+                    <config>
+                        <type>input</type>
+                        <size>8</size>
+                        <default>5</default>
+                        <eval>required,int</eval>
+                    </config>
                 </TCEforms>
-                <type>array</type>
-                <el>
-                    <interval>
-                        <TCEforms>
-                            <label>LLL:EXT:dycon_carousel/Resources/Private/Language/Backend.xlf:carousel.interval
-                            </label>
-                            <config>
-                                <type>input</type>
-                                <size>8</size>
-                                <default>5000</default>
-                                <eval>required,int</eval>
-                            </config>
-                        </TCEforms>
-                    </interval>
-                    <wrap>
-                        <TCEforms>
-                            <label>LLL:EXT:dycon_carousel/Resources/Private/Language/Backend.xlf:carousel.wrap</label>
-                            <config>
-                                <type>check</type>
-                                <default>1</default>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0">LLL:EXT:dycon_carousel/Resources/Private/Language/Backend.xlf:carousel.wrap.description</numIndex>
-                                    </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
-                    </wrap>
-                    <colourstyle>
-                        <TCEforms>
-                            <label>LLL:EXT:dycon_carousel/Resources/Private/Language/Backend.xlf:carousel.colourstyle
-                            </label>
-                            <config>
-                                <type>select</type>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0">LLL:EXT:dycon_carousel/Resources/Private/Language/Backend.xlf:carousel.colourstyle.0</numIndex>
-                                    </numIndex>
-                                    <numIndex index="1" type="array">
-                                        <numIndex index="1">LLL:EXT:dycon_carousel/Resources/Private/Language/Backend.xlf:carousel.colourstyle.1</numIndex>
-                                    </numIndex>
-                                    <numIndex index="2" type="array">
-                                        <numIndex index="2">LLL:EXT:dycon_carousel/Resources/Private/Language/Backend.xlf:carousel.colourstyle.2</numIndex>
-                                    </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
-                    </colourstyle>
-                </el>
-            </ROOT>
-        </sDEF>
-    </sheets>
+            </settings.interval>
+            <settings.wrap>
+                <TCEforms>
+                    <label>LLL:EXT:dycon_carousel/Resources/Private/Language/locallang.xlf:carousel.wrap</label>
+                    <config>
+                        <type>check</type>
+                        <default>1</default>
+                        <items type="array">
+                            <numIndex index="0" type="array">
+                                <numIndex index="0">LLL:EXT:dycon_carousel/Resources/Private/Language/locallang.xlf:carousel.wrap.label</numIndex>
+                            </numIndex>
+                        </items>
+                    </config>
+                </TCEforms>
+            </settings.wrap>
+            <settings.slideshow>
+                <TCEforms>
+                    <label>LLL:EXT:dycon_carousel/Resources/Private/Language/locallang.xlf:carousel.slideshow</label>
+                    <config>
+                        <type>check</type>
+                        <default>0</default>
+                        <items type="array">
+                            <numIndex index="0" type="array">
+                                <numIndex index="0">LLL:EXT:dycon_carousel/Resources/Private/Language/locallang.xlf:carousel.slideshow.label</numIndex>
+                            </numIndex>
+                        </items>
+                    </config>
+                </TCEforms>
+            </settings.slideshow>
+            <settings.colourstyle>
+                <TCEforms>
+                    <label>LLL:EXT:dycon_carousel/Resources/Private/Language/locallang.xlf:carousel.colourstyle
+                    </label>
+                    <config>
+                        <type>select</type>
+                        <items type="array">
+                            <numIndex index="0" type="array">
+                                <numIndex index="0">LLL:EXT:dycon_carousel/Resources/Private/Language/locallang.xlf:carousel.colourstyle.0</numIndex>
+                                <numIndex index="1">0</numIndex>
+                            </numIndex>
+                            <numIndex index="1" type="array">
+                                <numIndex index="0">LLL:EXT:dycon_carousel/Resources/Private/Language/locallang.xlf:carousel.colourstyle.1</numIndex>
+                                <numIndex index="1">1</numIndex>
+                            </numIndex>
+                            <numIndex index="2" type="array">
+                                <numIndex index="0">LLL:EXT:dycon_carousel/Resources/Private/Language/locallang.xlf:carousel.colourstyle.2</numIndex>
+                                <numIndex index="1">2</numIndex>
+                            </numIndex>
+                        </items>
+                    </config>
+                </TCEforms>
+            </settings.colourstyle>
+        </el>
+    </ROOT>
 </T3DataStructure>

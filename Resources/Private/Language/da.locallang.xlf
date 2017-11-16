@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0" xmlns="urn:oasis:names:tc:xliff:document:1.1">
+	<file source-language="en" target-language="da" datatype="plaintext" original="messages" date="2017-11-14T18:20:51Z" product-name="dycon-carousel">
+        <header/>
+        <body>
+            <trans-unit id="settings">
+                <source>settings</source>
+                <target>Dycon Image slider - indstillinger</target>
+            </trans-unit>
+            <trans-unit id="carousel.helptext.label">
+                <source>carousel.helptext.label</source>
+                <target>Bemærk</target>
+            </trans-unit>
+            <trans-unit id="carousel.helptext">
+                <source>carousel.helptext</source>
+                <target><![CDATA[Den tekst der skal vises i kassen under hvert billede skal indsættes i billedets Beskrivelses felt. <br>Klik på pilen ud for et billede for at få adgang til at indtaste en beskrivelse til et billede.]]></target>
+            <trans-unit id="content_element.carouseltitle">
+                <source>content_element.carouseltitle</source>
+                <target>Dycon Image slider - Karusel</target>
+            </trans-unit>
+            <trans-unit id="content_element.carouseldesc">
+                <source>carouseldesc</source>
+                <target>Indsæt billeder til visning i et slideshow</target>
+            </trans-unit>
+            <trans-unit id="carousel.options">
+                <source>options</source>
+                <target>Dycon Image Slider Indstillinger</target>
+            </trans-unit>
+            <trans-unit id="carousel.interval">
+                <source>interval</source>
+                <target>Antal sekunder mellem hvert billedskifte</target>
+            </trans-unit>
+            <trans-unit id="carousel.wrap">
+                <source>wrap</source>
+                <target>Skift automatisk fra sidste til første (Wrap?)</target>
+            </trans-unit>
+            <trans-unit id="carousel.wrap.label">
+                <source>wrap.label</source>
+                <source>Aktiv</source>
+            </trans-unit>
+            <trans-unit id="carousel.slideshow">
+                <source>slideshow</source>
+                <target>Skift automatisk billeder (slideshow)</target>
+            </trans-unit>
+            <trans-unit id="carousel.slideshow.label">
+                <source>Aktiv</source>
+                <target>Aktiv</target>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle">
+                <source>colourstyle</source>
+                <target>Vælg farver/tema for tekstkassen</target>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.0">
+                <source>colourstyle.0</source>
+                <target>Hvid/grå</target>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.1">
+                <source>colourstyle.1</source>
+                <target>Rød/grå</target>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.2">
+                <source>colourstyle.2</source>
+                <target>Blå/grå</target>
+            </trans-unit>
+            <trans-unit id="skiptomaincontent">
+                <source>skiptomaincontent</source>
+                <target>Gå til indhold</target>
+            </trans-unit>
+            <trans-unit id="previous">
+                <source>Previous</source>
+                <target>Forrige</target>
+            </trans-unit>
+            <trans-unit id="next">
+                <source>Next</source>
+                <target>Næste</target>
+            </trans-unit>
+            <trans-unit id="externalmediaunsupported">
+                <source>externalmediaunsupported</source>
+                <target>Mediet %s understøttes ikke. indsæt en korrekt URL til video fra YouTube eller Vimeo.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

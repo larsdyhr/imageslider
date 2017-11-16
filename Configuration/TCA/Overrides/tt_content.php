@@ -16,9 +16,9 @@ $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'] = array(
 );
  */
 	$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'][] = array(
-		'LLL:EXT:dycon_carousel/Resources/Private/Language/Backend.xlf:content_element.carouseltitle',
+		'LLL:EXT:dycon_carousel/Resources/Private/Language/locallang.xlf:content_element.carouseltitle',
 		'dyconcarousel_imageslider',
-		( intval(TYPO3_branch) > 6) ? 'EXT:frontend/Resources/Public/Icons/ImageOrientation/above_center.gif' : 'gfx/selicons/above_center.gif'
+		( intval(TYPO3_branch) > 6) ? 'EXT:frontend/Resources/Public/Icons/ImageOrientation/above_center.gif' : 'gfx/i/tt_content_image.gif'
 	);
 
 /***************
@@ -42,31 +42,22 @@ $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'] = array(
 //--palette--;'.$LLLocation.'/locallang_ttc.xlf:palette.multimediafiles;multimediafiles,
 //--linebreak--,pi_flexform,
 
-	$GLOBALS['TCA']['tt_content']['types']['dycon_carousel'] = array(
+	$GLOBALS['TCA']['tt_content']['types']['dyconcarousel_imageslider'] = array(
 		'showitem' => '
 			CType;LLL:EXT:cms/locallang_ttc.xlf:CType_formlabel,
 			sys_language_uid;'.$LLLocation.'/locallang_ttc.xlf:sys_language_uid_formlabel, 
 			l18n_parent,
 			image,
 			pi_flexform,
-			imagewidth,
-			imageheight,
-			sectionIndex;Wrap?,
-			image_noRows;Skift billederne automatisk,
-			table_border;Antal sekunder mellem billedskift,
 			--div--;'.$LLLocation.'/locallang_ttc.xlf:tabs.access,
 				--palette--;'.$LLLocation.'/locallang_ttc.xlf:palette.visibility;visibility, 
 				--palette--;'.$LLLocation.'/locallang_ttc.xlf:palette.access;access'
 	);
 	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['dyconcarousel_imageslider'] = 'mimetypes-x-content-image';
-	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['dycon_carousel'] = 'mimetypes-x-content-media';
-	$GLOBALS['TCA']['tt_content']['types']['dyconcarousel_imageslider'] = $GLOBALS['TCA']['tt_content']['types']['dycon_carousel'];
-	//$GLOBALS['TCA']['tt_content'] = array_replace_recursive($GLOBALS['TCA']['tt_content'], $tca);
-
 	$GLOBALS['TCA']['tt_content']['columns']['image']['config']['filter'][] = array (
 		'userFunc' => 'DYCON\DyconCarousel\Imagefilter->doFilter',
 		'parameters' => array(
-			'minWidth' => '600',
-			'minHeight' => '500'
+			'minWidth' => '1920',
+			'minHeight' => '1160'
 		)
 	);

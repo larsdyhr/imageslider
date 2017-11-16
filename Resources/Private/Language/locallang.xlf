@@ -1,26 +1,65 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z"
-          product-name="bootstrap_package">
+<xliff version="1.0" xmlns="urn:oasis:names:tc:xliff:document:1.1">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-11-14T18:20:51Z" product-name="dycon-carousel">
         <header/>
         <body>
-
+            <trans-unit id="settings">
+                <source>Dycon Image slider - settings</source>
+            </trans-unit>
+            <trans-unit id="carousel.helptext.label">
+                <source>Note:</source>
+            </trans-unit>
+            <trans-unit id="carousel.helptext">
+                <source><![CDATA[The text shown in the text box below each picture is inserted in the description field for each picture. <br>Click the small arrow left of each picture to see the description and other fields for each picture.]]></source>
+            </trans-unit>
+            <trans-unit id="content_element.carouseltitle">
+                <source>Dycon Image slider - Carousel</source>
+            </trans-unit>
+            <trans-unit id="content_element.carouseldesc">
+                <source>Insert images to be displayed as slides</source>
+            </trans-unit>
+            <trans-unit id="carousel.options">
+                <source>Dycon Image Slider Options</source>
+            </trans-unit>
+            <trans-unit id="carousel.interval">
+                <source>Number of seconds between slides</source>
+            </trans-unit>
+            <trans-unit id="carousel.wrap">
+                <source>Change automatically from last to first slide</source>
+            </trans-unit>
+            <trans-unit id="carousel.wrap.label">
+                <source>Active</source>
+            </trans-unit>
+            <trans-unit id="carousel.slideshow">
+                <source>Change slides automatically (slideshow)</source>
+            </trans-unit>
+            <trans-unit id="carousel.slideshow.label">
+                <source>Active</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle">
+                <source>Colour style / theme - for the textbox</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.0">
+                <source>White/grey</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.1">
+                <source>Red/grey</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.2">
+                <source>Blue/grey</source>
+            </trans-unit>
             <trans-unit id="skiptomaincontent">
                 <source>Skip to main content</source>
             </trans-unit>
-
             <trans-unit id="previous">
                 <source>Previous</source>
             </trans-unit>
-
             <trans-unit id="next">
                 <source>Next</source>
             </trans-unit>
-
             <trans-unit id="externalmediaunsupported">
                 <source>The external media source %s is not supported. Please provide a valid YouTube or Vimeo URL.</source>
             </trans-unit>
-
         </body>
     </file>
 </xliff>

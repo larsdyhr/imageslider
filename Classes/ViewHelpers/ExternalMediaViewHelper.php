@@ -1,5 +1,5 @@
 <?php
-namespace BK2K\BootstrapPackage\ViewHelpers;
+namespace DYCON\DyconCarousel\ViewHelpers;
 
 /*
  *  The MIT License (MIT)
@@ -75,7 +75,7 @@ class ExternalMediaViewHelper extends AbstractViewHelper implements CompilableIn
         RenderingContextInterface $renderingContext
     ) {
         $templateVariableContainer = $renderingContext->getTemplateVariableContainer();
-        $externalMediaUtility = GeneralUtility::makeInstance('BK2K\\BootstrapPackage\\Utility\\ExternalMediaUtility');
+        $externalMediaUtility = GeneralUtility::makeInstance('DYCON\\DyconCarousel\\Utility\\ExternalMediaUtility');
         $externalMedia = $externalMediaUtility->getEmbedCode($arguments['url'], $arguments['class']);
         $templateVariableContainer->add('externalMedia', $externalMedia);
         $content = $renderChildrenClosure();

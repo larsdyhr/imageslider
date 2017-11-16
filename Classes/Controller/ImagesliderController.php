@@ -49,16 +49,27 @@ class ImagesliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 	 */
 	public function showAction() {
 		$data = $this->configurationManager->getContentObject()->data;
+		// $this->configurationManager->getContentObject()->readFlexformIntoConf($data['pi_flexform'], $data);
+		DebuggerUtility::var_dump($this->settings);
+		$interval = isset($this->settings["interval"]) ? (int)$this->settings["interval"] : 5;
+		$wrap = isset($this->settings["wrap"]) ? (int)$this->settings["wrap"] : 1;
+		$slideshow = isset($this->settings["slideshow"]) ? (int)$this->settings["slideshow"] : 0;
+		$colourstyle = isset($this->settings["colourstyle"]) ? (int)$this->settings["colourstyle"] : 0;
+
+		$interval = $interval * 1000;
+		$this->view->assign('interval', $interval);
+		$this->view->assign('colourstyle', $colourstyle);
+		$this->view->assign('slideshow', $slideshow);
+		$this->view->assign('wrap', $wrap);
+
 		$this->pageRenderer->addCssFile('http://www.jacklmoore.com/colorbox/example1/colorbox.css');
 		$datauid = $data["uid"];
 		$js = '
 			var DYCON = DYCON || {};
-			DYCON.events = [];
+			DYCON.slides = [];
 			window.DYCON = DYCON;
-			//$(document).ready(function() {DYCON.ready();});
 			DYCON.ready = function() {
-				console.log("DYCON.ready called");
-				jQuery(".dyconcarousel'.$data["uid"].'").colorbox({rel:"dyconcarousel'.$data["uid"].'"});	
+				jQuery(".dyconcarousel'.$data["uid"].'").colorbox({rel:"dyconcarousel'.$data["uid"].'",transition:"fade",slideshow:'.($slideshow ? "true":"false").',slideshowSpeed: '.$interval.',slideshowAuto:true,loop:'.($wrap ? "true":"false").',iframe:false});
 			};
 			DYCON.addScript = function( url, callback ) {
 				var script = document.createElement( "script" );
@@ -66,23 +77,18 @@ class ImagesliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 				script.type = "text/javascript";
 				script.src = url;
 				document.body.appendChild( script );
-				console.log("added:" + url); 
 			};
 			DYCON.addColorbox = function() {
-				console.log("DYCON.addColorbox called"); 
 				DYCON.addScript("https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.4/jquery.colorbox.js", DYCON.ready);
 			};
 			if (typeof jQuery === "undefined") {
-				console.log("jQuery is undefined -> loading"); 
 				DYCON.addScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js", DYCON.addColorbox);
 			} else {
 				DYCON.addColorbox();
 			}
 		';
 		$this->pageRenderer->addJsFooterInlineCode('dyconcarousel', $js);
-		$image = $data['image'];
 		$this->view->assign('item', $data);
-		// DebuggerUtility::var_dump($image);
+		// DebuggerUtility::var_dump($data);
 	}
-
 }

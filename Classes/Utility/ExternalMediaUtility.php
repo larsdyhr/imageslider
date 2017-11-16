@@ -1,5 +1,5 @@
 <?php
-namespace BK2K\BootstrapPackage\Utility;
+namespace DYCON\DyconCarousel\Utility;
 
 /*
  *  The MIT License (MIT)

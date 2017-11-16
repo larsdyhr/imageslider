@@ -33,14 +33,11 @@ if( intval(TYPO3_branch) ==6) {
 // icon = EXT:dycon_carousel/Resources/Public/Images/images_only.gif
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
 'mod.wizards.newContentElement.wizardItems.common.elements.dyconcarousel_imageslider {
-        icon = gfx/i/tt_content_image.gif
-        title = LLL:EXT:dycon_carousel/Resources/Private/Language/Backend.xlf:content_element.carouseltitle
-        description = LLL:EXT:dycon_carousel/Resources/Private/Language/Backend.xlf:content_element.carouseldescription
+        icon = gfx/c_wiz/images_only.gif
+        title = LLL:EXT:dycon_carousel/Resources/Private/Language/locallang.xlf:content_element.carouseltitle
+        description = LLL:EXT:dycon_carousel/Resources/Private/Language/locallang.xlf:content_element.carouseldesc
         tt_content_defValues {
             CType = dyconcarousel_imageslider
-			imagewidth = 1000
-			imageheight = 900
-			table_border = 5
         }
     }
     mod.wizards.newContentElement.wizardItems.common.show := addToList(dyconcarousel_imageslider)'

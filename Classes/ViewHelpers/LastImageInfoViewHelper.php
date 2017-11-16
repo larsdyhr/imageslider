@@ -1,5 +1,5 @@
 <?php
-namespace BK2K\BootstrapPackage\ViewHelpers;
+namespace DYCON\DyconCarousel\ViewHelpers;
 
 /*
  *  The MIT License (MIT)

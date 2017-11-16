@@ -18,16 +18,25 @@
                 <source>Dycon Image Slider Options</source>
             </trans-unit>
             <trans-unit id="carousel.interval">
-                <source>Interval in ms</source>
+                <source>Antal sekunder mellem hvert billedskifte</source>
             </trans-unit>
             <trans-unit id="carousel.background_image_maxwidth">
                 <source>Max width of background images in px</source>
             </trans-unit>
             <trans-unit id="carousel.wrap">
-                <source>Wrap</source>
+                <source>Skift automatisk fra sidste til første (Wrap?)</source>
             </trans-unit>
-            <trans-unit id="carousel.wrap.description">
-                <source>Start the Carousel from the beginning once it has arrived at the end.</source>
+            <trans-unit id="carousel.wrap.label">
+                <source>Aktiv</source>
+            </trans-unit>
+            <trans-unit id="carousel.slideshow">
+                <source>Skift automatisk billeder (slideshow)</source>
+            </trans-unit>
+            <trans-unit id="carousel.slideshow.label">
+                <source>Aktiv</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle">
+                <source>Vælg farver/tema for tekstkassen</source>
             </trans-unit>
             <trans-unit id="carousel.colourstyle.0">
                 <source>Hvid/grå</source>
