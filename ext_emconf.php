@@ -21,14 +21,14 @@ $EM_CONF[$_EXTKEY] = array (
   array (
     'psr-4' => 
     array (
-      'dycon\\DyconCarousel\\' => 'Classes',
+      'DYCON\\DyconCarousel\\' => 'Classes',
     ),
   ),
   'state' => 'stable',
   'uploadfolder' => false,
   'createDirs' => '',
   'clearCacheOnLoad' => 1,
-  'version' => '1.0.1',
+  'version' => '1.0.2',
   'clearcacheonload' => true,
 );
 
