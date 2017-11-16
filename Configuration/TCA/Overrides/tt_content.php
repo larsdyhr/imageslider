@@ -28,13 +28,13 @@ $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'] = array(
  * So using the existing fields. : https://forge.typo3.org/issues/68045
  * And thus not using flexform for inline FAL field
  **/
-/*
+
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
     '*',
     'FILE:EXT:dycon_carousel/Configuration/FlexForms/Carousel.xml',
-    'dycon_carousel'
+    'dyconcarousel_imageslider'
 );
-*/
+
 // @note: If I want to override the default rendering of the uploaded files (and add a field or whatever),
 // I probably need a new field to be added to tt_content,
 // as I will have to override the general image field TCA to override the inline record
@@ -46,8 +46,14 @@ $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'] = array(
 		'showitem' => '
 			CType;LLL:EXT:cms/locallang_ttc.xlf:CType_formlabel,
 			sys_language_uid;'.$LLLocation.'/locallang_ttc.xlf:sys_language_uid_formlabel, 
-			l18n_parent,image,imagewidth,imageheight,
-			sectionIndex;Wrap?,image_noRows;Skift billederne automatisk,table_border;Antal sekunder mellem billedskift,
+			l18n_parent,
+			image,
+			pi_flexform,
+			imagewidth,
+			imageheight,
+			sectionIndex;Wrap?,
+			image_noRows;Skift billederne automatisk,
+			table_border;Antal sekunder mellem billedskift,
 			--div--;'.$LLLocation.'/locallang_ttc.xlf:tabs.access,
 				--palette--;'.$LLLocation.'/locallang_ttc.xlf:palette.visibility;visibility, 
 				--palette--;'.$LLLocation.'/locallang_ttc.xlf:palette.access;access'

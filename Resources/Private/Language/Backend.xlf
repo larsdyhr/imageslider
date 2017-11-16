@@ -29,7 +29,15 @@
             <trans-unit id="carousel.wrap.description">
                 <source>Start the Carousel from the beginning once it has arrived at the end.</source>
             </trans-unit>
-
+            <trans-unit id="carousel.colourstyle.0">
+                <source>Hvid/grå</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.1">
+                <source>Rød/grå</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.2">
+                <source>Blå/grå</source>
+            </trans-unit>
             <trans-unit id="carousel_item">
                 <source>Carousel Item</source>
             </trans-unit>
