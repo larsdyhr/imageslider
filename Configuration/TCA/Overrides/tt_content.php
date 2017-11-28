@@ -41,10 +41,13 @@ $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'] = array(
 // (which is a sys_file_ref pointing to sys_file).
 //--palette--;'.$LLLocation.'/locallang_ttc.xlf:palette.multimediafiles;multimediafiles,
 //--linebreak--,pi_flexform,
-
+	//$GLOBALS['TCA']['tt_content']['palettes']['dyconcarousel_imageslider'] = array(
+	//	'showitem' => ''
+	//);
 	$GLOBALS['TCA']['tt_content']['types']['dyconcarousel_imageslider'] = array(
 		'showitem' => '
 			CType;LLL:EXT:cms/locallang_ttc.xlf:CType_formlabel,
+			colPos;LLL:EXT:cms/locallang_ttc.xlf:colPos_formlabel, 
 			sys_language_uid;'.$LLLocation.'/locallang_ttc.xlf:sys_language_uid_formlabel, 
 			l18n_parent,
 			image,

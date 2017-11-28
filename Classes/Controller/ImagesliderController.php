@@ -50,7 +50,6 @@ class ImagesliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 	public function showAction() {
 		$data = $this->configurationManager->getContentObject()->data;
 		// $this->configurationManager->getContentObject()->readFlexformIntoConf($data['pi_flexform'], $data);
-		DebuggerUtility::var_dump($this->settings);
 		$interval = isset($this->settings["interval"]) ? (int)$this->settings["interval"] : 5;
 		$wrap = isset($this->settings["wrap"]) ? (int)$this->settings["wrap"] : 1;
 		$slideshow = isset($this->settings["slideshow"]) ? (int)$this->settings["slideshow"] : 0;
@@ -61,7 +60,8 @@ class ImagesliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 		$this->view->assign('colourstyle', $colourstyle);
 		$this->view->assign('slideshow', $slideshow);
 		$this->view->assign('wrap', $wrap);
-
+		$data["width"] = 1920;
+		$data["height"] = 1160;
 		$this->pageRenderer->addCssFile('http://www.jacklmoore.com/colorbox/example1/colorbox.css');
 		$datauid = $data["uid"];
 		$js = '
@@ -69,7 +69,7 @@ class ImagesliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 			DYCON.slides = [];
 			window.DYCON = DYCON;
 			DYCON.ready = function() {
-				jQuery(".dyconcarousel'.$data["uid"].'").colorbox({rel:"dyconcarousel'.$data["uid"].'",transition:"fade",slideshow:'.($slideshow ? "true":"false").',slideshowSpeed: '.$interval.',slideshowAuto:true,loop:'.($wrap ? "true":"false").',iframe:false});
+				jQuery(".dyconcarousel'.$data["uid"].'").colorbox({rel:"dyconcarousel'.$data["uid"].'",transition:"fade",slideshow:'.($slideshow ? "true":"false").',slideshowSpeed: '.$interval.',slideshowAuto:true,loop:'.($wrap ? "true":"false").',iframe:false,maxWidth:1920,width:1700});
 			};
 			DYCON.addScript = function( url, callback ) {
 				var script = document.createElement( "script" );

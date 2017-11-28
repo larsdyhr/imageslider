@@ -9,11 +9,11 @@
             <trans-unit id="carousel.helptext.label">
                 <source>Note:</source>
             </trans-unit>
-            <trans-unit id="carousel.helptext">
-                <source><![CDATA[The text shown in the text box below each picture is inserted in the description field for each picture. <br>Click the small arrow left of each picture to see the description and other fields for each picture.]]></source>
+            <trans-unit id="carousel.helptext" xml:space="preserve">
+                <source>The text shown in the text box below each picture is inserted in the description field for each picture. Click the small arrow left of each picture to see the description and other fields for each picture.</source>
             </trans-unit>
             <trans-unit id="content_element.carouseltitle">
-                <source>Dycon Image slider - Carousel</source>
+                <source>Dycon Image slider</source>
             </trans-unit>
             <trans-unit id="content_element.carouseldesc">
                 <source>Insert images to be displayed as slides</source>
@@ -28,25 +28,46 @@
                 <source>Change automatically from last to first slide</source>
             </trans-unit>
             <trans-unit id="carousel.wrap.label">
-                <source>Active</source>
+                <source>Change automatically from last to first slide</source>
             </trans-unit>
             <trans-unit id="carousel.slideshow">
                 <source>Change slides automatically (slideshow)</source>
             </trans-unit>
             <trans-unit id="carousel.slideshow.label">
-                <source>Active</source>
+                <source>Change slides automatically (slideshow)</source>
             </trans-unit>
             <trans-unit id="carousel.colourstyle">
-                <source>Colour style / theme - for the textbox</source>
+                <source>Choose background colour</source>
             </trans-unit>
             <trans-unit id="carousel.colourstyle.0">
-                <source>White/grey</source>
+                <source>Blue</source>
             </trans-unit>
             <trans-unit id="carousel.colourstyle.1">
-                <source>Red/grey</source>
+                <source>Purple</source>
             </trans-unit>
             <trans-unit id="carousel.colourstyle.2">
-                <source>Blue/grey</source>
+                <source>Cyan Blue</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.3">
+                <source>Turkish green</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.4">
+                <source>Green</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.5">
+                <source>Yellow</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.6">
+                <source>Orange</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.7">
+                <source>Red</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.8">
+                <source>Magenta-red</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.9">
+                <source>Grey</source>
             </trans-unit>
             <trans-unit id="skiptomaincontent">
                 <source>Skip to main content</source>

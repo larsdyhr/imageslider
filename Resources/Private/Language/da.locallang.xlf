@@ -13,10 +13,11 @@
             </trans-unit>
             <trans-unit id="carousel.helptext">
                 <source>carousel.helptext</source>
-                <target><![CDATA[Den tekst der skal vises i kassen under hvert billede skal indsættes i billedets Beskrivelses felt. <br>Klik på pilen ud for et billede for at få adgang til at indtaste en beskrivelse til et billede.]]></target>
+                <target>Den tekst der skal vises i kassen under hvert billede skal indsættes i billedets Beskrivelses felt. Klik på pilen ud for et billede for at få adgang til at indtaste en beskrivelse til et billede.</target>
+            </trans-unit>
             <trans-unit id="content_element.carouseltitle">
                 <source>content_element.carouseltitle</source>
-                <target>Dycon Image slider - Karusel</target>
+                <target>Dycon Image slider</target>
             </trans-unit>
             <trans-unit id="content_element.carouseldesc">
                 <source>carouseldesc</source>
@@ -36,31 +37,59 @@
             </trans-unit>
             <trans-unit id="carousel.wrap.label">
                 <source>wrap.label</source>
-                <source>Aktiv</source>
+                <target>Kør billederne i ring</target>
             </trans-unit>
             <trans-unit id="carousel.slideshow">
                 <source>slideshow</source>
-                <target>Skift automatisk billeder (slideshow)</target>
+                <target>Billederne skal skifte automatisk (slideshow)</target>
             </trans-unit>
             <trans-unit id="carousel.slideshow.label">
-                <source>Aktiv</source>
-                <target>Aktiv</target>
+                <source>Change slides automatically (slideshow)</source>
+                <target>Billederne skal skifte automatisk (slideshow)</target>
             </trans-unit>
             <trans-unit id="carousel.colourstyle">
                 <source>colourstyle</source>
-                <target>Vælg farver/tema for tekstkassen</target>
+                <target>Vælg baggrundsfarve</target>
             </trans-unit>
             <trans-unit id="carousel.colourstyle.0">
                 <source>colourstyle.0</source>
-                <target>Hvid/grå</target>
+                <target>Blå</target>
             </trans-unit>
             <trans-unit id="carousel.colourstyle.1">
                 <source>colourstyle.1</source>
-                <target>Rød/grå</target>
+                <target>Lilla</target>
             </trans-unit>
             <trans-unit id="carousel.colourstyle.2">
                 <source>colourstyle.2</source>
-                <target>Blå/grå</target>
+                <target>Cyanblå</target>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.3">
+                <source>colourstyle.3</source>
+                <target>Turkisgrøn</target>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.4">
+                <source>colourstyle.4</source>
+                <target>Grøn</target>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.5">
+                <source>colourstyle.5</source>
+                <target>Gul</target>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.6">
+                <source>colourstyle.6</source>
+                <target>Orange</target>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.7">
+                <source>colourstyle.7</source>
+                <target>Rød</target>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.8">
+                <source>colourstyle.8</source>
+                <target>Magenta-rød</target>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.9">
+                <source>colourstyle.9</source>
+                <target>Grå</target>
             </trans-unit>
             <trans-unit id="skiptomaincontent">
                 <source>skiptomaincontent</source>

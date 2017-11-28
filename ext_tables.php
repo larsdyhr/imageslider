@@ -8,7 +8,7 @@ if (!defined('TYPO3_MODE')) {
 	'Configuration/TypoScript',
 	'Dycon Image Slider');
 
-if( intval(TYPO3_branch) > 6) {
+if( PHP_VERSION_ID > 50500 && intval(TYPO3_branch) > 6) {
 	$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 	$iconRegistry->registerIcon(
 		'content-dycon-carousel',

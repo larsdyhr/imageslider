@@ -2,13 +2,13 @@
 
 $EM_CONF[$_EXTKEY] = array (
   'title' => 'Dycon Carousel',
-  'description' => 'Dycon Carousel. intended to provide a simple to use image slider. Based on the work of Benjamin Kott',
+  'description' => 'Dycon Carousel. intended to provide a simple to use image slider.',
   'category' => 'templates',
   'constraints' => 
   array (
     'depends' => 
     array (
-      'typo3' => '6.2.0-8.99.99',
+      'typo3' => '6.2.0-7.99.99',
     ),
     'conflicts' => 
     array (
@@ -28,7 +28,7 @@ $EM_CONF[$_EXTKEY] = array (
   'uploadfolder' => false,
   'createDirs' => '',
   'clearCacheOnLoad' => 1,
-  'version' => '1.0.2',
+  'version' => '1.0.3',
   'clearcacheonload' => true,
 );
 

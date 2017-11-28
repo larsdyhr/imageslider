@@ -5,7 +5,7 @@
   "description": "image Carousel and slider",
   "require": {
     "php": ">=5.4.0",
-    "typo3/cms-core": "^6.2 || ^7.6 || ^8.0"
+    "typo3/cms-core": "^6.2 || ^7.6 "
   },
   "autoload": {
     "psr-4": {
