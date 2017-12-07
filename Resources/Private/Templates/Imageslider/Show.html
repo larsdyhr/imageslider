@@ -1,0 +1,13 @@
+{namespace dycon = DYCON\DyconCarousel\ViewHelpers}
+<style>
+    .dyconcarousel_textbox { border:1px solid #222; }
+    <f:if condition="{colourstyle} == 0">.dyconcarousel_textbox { background-color: #cccccc; color:#333333; }</f:if><f:if condition="{colourstyle} == 1">.dyconcarousel_textbox { background-color: #ffcc00; color:#333333; }</f:if><f:if condition="{colourstyle} == 2">.dyconcarousel_textbox { background-color: #ffef8f; color:#0e90d2; }</f:if>
+</style>
+<div class="dycon-carousel" data-dyconslideshow="{slideshow}" data-dyconinterval="{interval}" data-dyconwrap="{wrap}" data-dyconcolourstyle="{colourstyle}">
+    <dycon:fal data="{item}" as="images" table="tt_content">
+        <f:for each="{images}" as="image">
+            <a class="dyconcarousel{item.uid}" data-imageid="{image.uid}" title="{image.title}" alt="{image.alternative}" href="<f:uri.image src='{image.publicUrl}' width='{item.imagewidth}' height='{item.imageheight}c' />">{image.name}</a>
+            <span style="visibility:hidden;" id="dyconcarousel{item.uid}_{image.uid}">{image.description}</span>
+        </f:for>
+    </dycon:fal>
+</div>

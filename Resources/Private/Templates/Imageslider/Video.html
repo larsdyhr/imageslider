@@ -1,0 +1,27 @@
+{namespace dycon = DYCON\DyconCarousel\ViewHelpers}
+<style>
+    .dycon-video { border:1px solid #222; }
+</style>
+
+<div class="dycon-video" data-viewsenabled="{viewsenabled}">
+<f:if condition="{embedurl}">
+    <f:then>
+        <div style="max-width: 400px;">
+            <div class="embed-responsive">
+                <f:format.raw>{iframeembedcode}</f:format.raw>
+            </div>
+            <div class="dycon-video-headline">
+                <f:format.raw>{headline}</f:format.raw>
+            </div>
+            <div class="dycon-video-body">
+                <f:format.raw>{body}</f:format.raw>
+            </div>
+        </div>
+    </f:then>
+    <f:else>
+        <div class="alert alert-warning">
+            <f:translate key="externalmediaunsupported" extensionName="dycon_carousel" arguments="{0: '<strong>{link}</strong>'}" />
+        </div>
+    </f:else>
+</f:if>
+</div>

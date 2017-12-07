@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0" xmlns="urn:oasis:names:tc:xliff:document:1.1">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-11-14T18:20:51Z" product-name="dycon-carousel">
+        <header/>
+        <body>
+            <trans-unit id="settings">
+                <source>Dycon Image slider - settings</source>
+            </trans-unit>
+            <trans-unit id="carousel.helptext.label">
+                <source>Note:</source>
+            </trans-unit>
+            <trans-unit id="carousel.helptext" xml:space="preserve">
+                <source>The text shown in the text box below each picture is inserted in the description field for each picture. Click the small arrow left of each picture to see the description and other fields for each picture.</source>
+            </trans-unit>
+            <trans-unit id="content_element.carouseltitle">
+                <source>Dycon Image slider</source>
+            </trans-unit>
+            <trans-unit id="content_element.carouseldesc">
+                <source>Insert images to be displayed as slides</source>
+            </trans-unit>
+            <trans-unit id="carousel.options">
+                <source>Dycon Image Slider Options</source>
+            </trans-unit>
+            <trans-unit id="carousel.interval">
+                <source>Number of seconds between slides</source>
+            </trans-unit>
+            <trans-unit id="carousel.wrap">
+                <source>Change automatically from last to first slide</source>
+            </trans-unit>
+            <trans-unit id="carousel.wrap.label">
+                <source>Change automatically from last to first slide</source>
+            </trans-unit>
+            <trans-unit id="carousel.slideshow">
+                <source>Change slides automatically (slideshow)</source>
+            </trans-unit>
+            <trans-unit id="carousel.slideshow.label">
+                <source>Change slides automatically (slideshow)</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle">
+                <source>Choose background colour</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.0">
+                <source>Blue</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.1">
+                <source>Purple</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.2">
+                <source>Cyan Blue</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.3">
+                <source>Turkish green</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.4">
+                <source>Green</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.5">
+                <source>Yellow</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.6">
+                <source>Orange</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.7">
+                <source>Red</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.8">
+                <source>Magenta red</source>
+            </trans-unit>
+            <trans-unit id="carousel.colourstyle.9">
+                <source>Grey</source>
+            </trans-unit>
+            <trans-unit id="content_element.videotitle">
+                <source>Dycon Video Stream</source>
+            </trans-unit>
+            <trans-unit id="content_element.videoplugintitle">
+                <source>YouTube / Vimeo embed</source>
+            </trans-unit>
+            <trans-unit id="content_element.videodesc">
+                <source>Enter URL to Youtube or Vimeo</source>
+            </trans-unit>
+            <trans-unit id="video.sheet">
+                <source>Video settings</source>
+            </trans-unit>
+            <trans-unit id="video.link.label">
+                <source>Insert URL to YouTube or Vimeo</source>
+            </trans-unit>
+            <trans-unit id="video.views.label">
+                <source>Show View count, Likes and Comments</source>
+            </trans-unit>
+            <trans-unit id="video.share.label">
+                <source>Show "Share"-button</source>
+            </trans-unit>
+            <trans-unit id="video.headline.label">
+                <source>Headline</source>
+            </trans-unit>
+            <trans-unit id="video.body.label">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="content_element.image">
+                <source>Image (The images must be at least 1920px X 1160px)</source>
+            </trans-unit>
+            <trans-unit id="content_element.sliderflexformtitle">
+                <source>Settings for slider:</source>
+            </trans-unit>
+
+            <trans-unit id="content_element.videoplugintitle">
+                <source>Please provide a valid YouTube or Vimeo URL below</source>
+            </trans-unit>
+            <trans-unit id="skiptomaincontent">
+                <source>Skip to main content</source>
+            </trans-unit>
+            <trans-unit id="previous">
+                <source>Previous</source>
+            </trans-unit>
+            <trans-unit id="next">
+                <source>Next</source>
+            </trans-unit>
+            <trans-unit id="externalmediaunsupported">
+                <source>The external media source %s is not supported. Please provide a valid YouTube or Vimeo URL.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
