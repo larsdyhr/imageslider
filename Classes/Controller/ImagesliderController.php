@@ -86,33 +86,35 @@ class ImagesliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 		$this->view->assign('colourstyle', $colourstyle);
 		$colourcode = '#fff';
 		$darktext = 0;
+		// Colors taken from http://typo3.au.dk/vejledninger/indhold_paa_sider/knapper/
+		// Only the "base" color is used, as there is no hover effect
 		switch($colourstyle) {
 			case "0": // blå
-				$colourcode = '#1E2850';
+				$colourcode = 'rgb(0,37,70)'; // #1E2850
 				break;
 			case "1": // Lilla
-				$colourcode = '#4B0F79';
+				$colourcode = 'rgb(101,90,159)'; // #4B0F79
 				break;
 			case "2": // Cyanblå
-				$colourcode = '#5129A1';
+				$colourcode = 'rgb(55,160,203)'; // #5129A1
 				break;
 			case "3": // Turkisgrøn
-				$colourcode = '#00ABA4';
+				$colourcode = 'rgb(0,171,164)'; // #00ABA4';
 				break;
 			case "4": // Grøn
-				$colourcode = '#228822';
+				$colourcode = 'rgb(139,173,63)'; //'#228822';
 				break;
 			case "5": // Gul
-				$colourcode = '#989C0C';
+				$colourcode = 'rgb(250,187,0)'; //#989C0C';
 				break;
 			case "6": // Orange
-				$colourcode = '#B19035';
+				$colourcode = 'rgb(238,127,0)'; //#B19035';
 				break;
 			case "7": // Rød
-				$colourcode = '#5f0030';
+				$colourcode = 'rgb(226,0,26)'; //#5f0030';
 				break;
 			case "8": // Magenta-rød
-				$colourcode = '#5f0030';
+				$colourcode = 'rgb(226,0,122)'; // #5f0030';
 				break;
 			case "9": // Hvid
 				$colourcode = '#fff';
@@ -156,36 +158,6 @@ class ImagesliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 				}
 			}
 		';
-		/* Old code using colorbox
-		// $this->pageRenderer->addCssFile('http://www.jacklmoore.com/colorbox/example1/colorbox.css');
-		$js = '
-			var DYCON = DYCON || {};
-			window.DYCON = DYCON;
-			DYCON.ready = function() {
-				// jQuery(".dyconcarousel'.$datauid.'").colorbox({rel:"dyconcarousel'.$datauid.'",transition:"fade",slideshow:'.($slideshow ? "true":"false").',slideshowSpeed: '.$interval.',slideshowAuto:true,loop:'.($wrap ? "true":"false").',iframe:false,maxWidth:1920,width:1700});
-			};
-			DYCON.addScript = function( url, callback ) {
-				var script = document.createElement( "script" );
-				if( callback ) script.onload = callback;
-				script.type = "text/javascript";
-				script.src = url;
-				document.body.appendChild( script );
-			};
-			DYCON.addColorbox = function() {
-				DYCON.addedColorBox = true;
-				DYCON.addScript("https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.4/jquery.colorbox.js", DYCON.ready);
-			};
-			if (typeof jQuery === "undefined") {
-				DYCON.addScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js", DYCON.addColorbox);
-			} else {
-				if(DYCON.addedColorBox) {
-					DYCON.ready();
-				} else {
-					DYCON.addColorbox();
-				}
-			}
-		';
-		*/
 		$this->pageRenderer->addJsFooterInlineCode('dyconcarousel'.$datauid, $js);
 		$this->view->assign('item', $data);
 	}

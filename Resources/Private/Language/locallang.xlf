@@ -106,7 +106,7 @@
                 <source>Description</source>
             </trans-unit>
             <trans-unit id="content_element.image">
-                <source>Image (The images must be at least 1920px X 1160px)</source>
+                <source>Image (The images must be at least 1920px X 1160px, as they are scaled to a width of 2000px and cropcentered to a height of 1130px)</source>
             </trans-unit>
             <trans-unit id="content_element.sliderflexformtitle">
                 <source>Settings for slider:</source>

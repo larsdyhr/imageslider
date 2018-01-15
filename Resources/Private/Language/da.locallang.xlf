@@ -150,7 +150,7 @@
                 <target>Indstillinger til slideren:</target>
             </trans-unit>
             <trans-unit id="content_element.image">
-                <target>Billede (Billeder skal være være mindst 1920px bred og 1160px høj)</target>
+                <target>Billede (Billeder skal være være mindst 1920px bred og 1160px høj - skaleres til en bredde på 2000px og croppes til 1130px højde)</target>
             </trans-unit>
             <trans-unit id="content_element.videoplugintitle">
                 <target>YouTube embed</target>
