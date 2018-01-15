@@ -1,13 +1,108 @@
 {namespace dycon = DYCON\DyconCarousel\ViewHelpers}
-<style>
-    .dyconcarousel_textbox { border:1px solid #222; }
-    <f:if condition="{colourstyle} == 0">.dyconcarousel_textbox { background-color: #cccccc; color:#333333; }</f:if><f:if condition="{colourstyle} == 1">.dyconcarousel_textbox { background-color: #ffcc00; color:#333333; }</f:if><f:if condition="{colourstyle} == 2">.dyconcarousel_textbox { background-color: #ffef8f; color:#0e90d2; }</f:if>
-</style>
-<div class="dycon-carousel" data-dyconslideshow="{slideshow}" data-dyconinterval="{interval}" data-dyconwrap="{wrap}" data-dyconcolourstyle="{colourstyle}">
+<div class="dycon-carousel" data-dyconslideshow="{slideshow}" data-colourcode="{colourcode}" data-darktext="{darktext}" data-dyconinterval="{interval}" data-dyconwrap="{wrap}" data-dyconcolourstyle="{colourstyle}">
+    <div class="site-section">
+        <f:if condition="{item.header}">
+            <div class="site-section__header">
+                <span>{item.header}</span>
+            </div>
+        </f:if>
+        <div class="au-carousel-container js-au-carousel-container">
+            <div class="au-carousel js-au-carousel" carousel-options='{options}'>
+                <dycon:fal data="{item}" as="images" table="tt_content">
+                    <f:for each="{images}" as="image">
+                        <div class="au-carousel-item js-au-carousel-item">
+                            <div class="au-carousel-image">
+                                <img title="{image.title}" alt="{image.alternative}" src="<f:uri.image src='{image.publicUrl}' width='2000' height='1130c' />">
+                            </div>
+                        </div>
+                    </f:for>
+                </dycon:fal>
+                <div class="au-carousel-counter js-au-carousel-counter"></div>
+            </div>
+            <div class="au-carousel-caption-container js-au-carousel-caption-container">
+                <dycon:fal data="{item}" as="images" table="tt_content">
+                    <f:for each="{images}" as="image">
+                        <div class="au-carousel-caption js-carousel-caption-item">
+                            <div class="au-carousel-caption__text{f:if(condition: darktext, then: ' au-carousel-caption__text--dark', else: '')}" style="{f:if(condition:image.description, then: '', else: 'display:none;')}">
+                                {image.description}
+                            </div>
+                            <div class="au-carousel-caption__bg" style="background-color:{colourcode}"></div>
+                        </div>
+                    </f:for>
+                </dycon:fal>
+            </div>
+        </div>
+    </div>
+</div>
+
+<f:comment>
+    <!-- Old code before -->
     <dycon:fal data="{item}" as="images" table="tt_content">
         <f:for each="{images}" as="image">
             <a class="dyconcarousel{item.uid}" data-imageid="{image.uid}" title="{image.title}" alt="{image.alternative}" href="<f:uri.image src='{image.publicUrl}' width='{item.imagewidth}' height='{item.imageheight}c' />">{image.name}</a>
             <span style="visibility:hidden;" id="dyconcarousel{item.uid}_{image.uid}">{image.description}</span>
         </f:for>
     </dycon:fal>
-</div>
+
+    <div class="site-section">
+        <div class="site-section__header">
+            <span>Image Slider 01</span>
+        </div>
+        <!-- New Old code before -->
+
+        <!--
+The carousel images and captions are two separate section / loops for each carousel image.
+Use the data attr "carousel-options" on the ".js-au-carousel" div to define the following:
+Auto play (number in milliseconds): carousel-options='{ "autoPlay": 5000 }'
+Wrap around: carousel-options='{ "wrapAround": true }'
+-->
+        <div class="au-carousel-container js-au-carousel-container">
+
+            <div
+                    class="au-carousel js-au-carousel"
+                    carousel-options='{ "autoPlay": 4000, "wrapAround": true }'
+            >
+                <div class="au-carousel-item js-au-carousel-item">
+                    <div class="au-carousel-image">
+                        <img src="img/slider-image-01.jpg">
+                    </div>
+                </div>
+
+                <div class="au-carousel-item js-au-carousel-item">
+                    <div class="au-carousel-image">
+                        <img src="img/slider-image-02.jpg">
+                    </div>
+                </div>
+
+                <div class="au-carousel-item js-au-carousel-item">
+                    <div class="au-carousel-image">
+                        <img src="img/slider-image-03.jpg">
+                    </div>
+                </div>
+
+                <div class="au-carousel-counter js-au-carousel-counter"></div>
+            </div>
+
+
+            <div class="au-carousel-caption-container js-au-carousel-caption-container">
+
+                <div class="au-carousel-caption js-carousel-caption-item">
+                    <div class="au-carousel-caption__text">
+                        Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor.
+                    </div>
+                    <div class="au-carousel-caption__bg" style="background-color: #1E2850"></div>
+                </div>
+
+                <div class="au-carousel-caption js-carousel-caption-item">
+                    <div class="au-carousel-caption__text">
+                        Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+                    </div>
+                    <div class="au-carousel-caption__bg" style="background-color: #5f0030"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</f:comment>

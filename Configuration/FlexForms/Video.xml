@@ -65,6 +65,26 @@
                     </config>
                 </TCEforms>
             </settings.body>
+            <settings.colourstyle>
+                <TCEforms>
+                    <label>LLL:EXT:dycon_carousel/Resources/Private/Language/locallang.xlf:video.colourstyle
+                    </label>
+                    <config>
+                        <type>select</type>
+                        <items type="array">
+                            <numIndex index="0" type="array">
+                                <numIndex index="0">LLL:EXT:dycon_carousel/Resources/Private/Language/locallang.xlf:video.colourstyle.0</numIndex>
+                                <numIndex index="1">0</numIndex>
+                            </numIndex>
+                            <numIndex index="1" type="array">
+                                <numIndex index="0">LLL:EXT:dycon_carousel/Resources/Private/Language/locallang.xlf:video.colourstyle.1</numIndex>
+                                <numIndex index="1">1</numIndex>
+                            </numIndex>
+                        </items>
+                    </config>
+                </TCEforms>
+            </settings.colourstyle>
+
         </el>
     </ROOT>
 </T3DataStructure>

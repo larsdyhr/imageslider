@@ -1,22 +1,85 @@
 {namespace dycon = DYCON\DyconCarousel\ViewHelpers}
 <style>
-    .dycon-video { border:1px solid #222; }
+    .au-youtube-info { background-color: #242F67; }
+    .au-youtube-info.au-youtube-info--light-bg  { background-color: #fff; }
 </style>
 
-<div class="dycon-video" data-viewsenabled="{viewsenabled}">
-<f:if condition="{embedurl}">
+<div class="dycon-video">
+    <div class="site-section">
+        <f:if condition="{item.header}">
+        <div class="site-section__header">
+            <span>{item.header}</span>
+        </div>
+        </f:if>
+<f:if condition="{videoid}">
     <f:then>
-        <div style="max-width: 400px;">
-            <div class="embed-responsive">
-                <f:format.raw>{iframeembedcode}</f:format.raw>
+        <div class="au-youtube-container js-au-youtube-container" data-viewsenabled="{viewsenabled}" data-videoid="{videoid}">
+            <div class="au-youtube-video js-au-youtube-video">
+                <div class="au-youtube-video__poster fill-container fill-image center-content" style="background-image: url('/typo3conf/ext/dycon_carousel/Resources/Public/Images/slider-image-02.jpg');">
+                    <div class="au-youtube-video__play js-au-play-youtube-video">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 41.999 41.999" style="enable-background:new 0 0 41.999 41.999;" xml:space="preserve" width="512px" height="512px">
+					        <path d="M36.068,20.176l-29-20C6.761-0.035,6.363-0.057,6.035,0.114C5.706,0.287,5.5,0.627,5.5,0.999v40  c0,0.372,0.206,0.713,0.535,0.886c0.146,0.076,0.306,0.114,0.465,0.114c0.199,0,0.397-0.06,0.568-0.177l29-20  c0.271-0.187,0.432-0.494,0.432-0.823S36.338,20.363,36.068,20.176z" fill="#FFFFFF"/>
+				        </svg>
+                    </div>
+                </div>
+                <div class="au-youtube-video__embed js-au-youtube-embed" youtube-video-id="{videoid}"></div>
             </div>
-            <div class="dycon-video-headline">
-                <f:format.raw>{headline}</f:format.raw>
-            </div>
-            <div class="dycon-video-body">
-                <f:format.raw>{body}</f:format.raw>
+            <f:if condition="{colourstyle} == 0">
+                <div class="au-youtube-info js-au-youtube-info" style="">
+            </f:if>
+            <f:if condition="{colourstyle} == 1">
+                <div class="au-youtube-info js-au-youtube-info au-youtube-info--light-bg" style="">
+            </f:if>
+                <div class="au-youtube-info__toolbar" style="{f:if(condition: viewsenabled, then: '', else: 'display:none;')}">
+                    <div class="au-youtube-info__views">
+                        <span class="js-au-youtube-views"></span>
+                        <span>Visninger</span>
+                    </div>
+                    <div class="au-youtube-info__data">
+                        <div class="au-youtube-info__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
+                                <g>
+                                    <g id="favorite-icon">
+                                        <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55    C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z" fill="#FFFFFF"/>
+                                    </g>
+                                </g>
+        					</svg>
+                            <span class="js-au-youtube-likes"></span>
+                        </div>
+                        <div class="au-youtube-info__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 404.941 404.941" style="enable-background:new 0 0 404.941 404.941;" xml:space="preserve">
+                                <g id="comments-icon">
+                                    <path d="M391.689,18.283H13.25C5.931,18.283,0,24.218,0,31.535v242.48c0,7.32,5.931,13.252,13.25,13.252h202.674v86.137   c0,5.359,3.228,10.193,8.18,12.244c1.64,0.68,3.361,1.01,5.068,1.01c3.446,0,6.838-1.348,9.372-3.883l96.171-95.508h56.975   c7.32,0,13.252-5.932,13.252-13.252V31.534C404.943,24.217,399.01,18.283,391.689,18.283L391.689,18.283z" fill="#FFFFFF"/>
+                                </g>
+        					</svg>
+                            <span class="js-au-youtube-comments"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="au-youtube-info__content">
+                    <span class="au-youtube-info__heading h4">
+                         <f:format.raw>{headline}</f:format.raw>
+                    </span>
+                    <span class="au-youtube-info__text">
+                        <f:format.raw>{body}</f:format.raw>
+            		</span>
+                </div>
             </div>
         </div>
+        <f:comment>
+            <!-- Original html code by Dycon - substituted by provided by AU (Peter Mandrup)-->
+                <div style="max-width: 400px;">
+                    <div class="embed-responsive">
+                        <f:format.raw>{iframeembedcode}</f:format.raw>
+                    </div>
+                    <div class="dycon-video-headline">
+                        <f:format.raw>{headline}</f:format.raw>
+                    </div>
+                    <div class="dycon-video-body">
+                        <f:format.raw>{body}</f:format.raw>
+                    </div>
+                </div>
+        </f:comment>
     </f:then>
     <f:else>
         <div class="alert alert-warning">
@@ -24,4 +87,76 @@
         </div>
     </f:else>
 </f:if>
+    </div>
 </div>
+<f:comment>
+    <!-- Original code dist from Peter Mandrup in start of jan 2018 -->
+    <!--
+    Youtube embed
+    The color scheme is defined on .au-youtube-info
+    If the background-color is light then add the class ".au-youtube-info--light-bg"
+    -->
+    <div class="au-youtube-container js-au-youtube-container">
+
+        <div class="au-youtube-video js-au-youtube-video">
+
+            <div class="au-youtube-video__poster fill-container fill-image center-content" style="background-image: url('img/slider-image-02.jpg');">
+                <div class="au-youtube-video__play js-au-play-youtube-video">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 41.999 41.999" style="enable-background:new 0 0 41.999 41.999;" xml:space="preserve" width="512px" height="512px">
+					<path d="M36.068,20.176l-29-20C6.761-0.035,6.363-0.057,6.035,0.114C5.706,0.287,5.5,0.627,5.5,0.999v40  c0,0.372,0.206,0.713,0.535,0.886c0.146,0.076,0.306,0.114,0.465,0.114c0.199,0,0.397-0.06,0.568-0.177l29-20  c0.271-0.187,0.432-0.494,0.432-0.823S36.338,20.363,36.068,20.176z" fill="#FFFFFF"/>
+				</svg>
+                </div>
+            </div>
+
+            <div class="au-youtube-video__embed js-au-youtube-embed" youtube-video-id="dQw4w9WgXcQ"></div>
+
+        </div>
+
+        <div class="au-youtube-info js-au-youtube-info" style="background-color: #242F67">
+
+            <div class="au-youtube-info__toolbar">
+
+                <div class="au-youtube-info__views">
+                    <span class="js-au-youtube-views"></span>
+                    <span>Visninger</span>
+                </div>
+
+                <div class="au-youtube-info__data">
+
+                    <div class="au-youtube-info__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
+						<g>
+							<g id="favorite-icon">
+								<path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55    C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z" fill="#FFFFFF"/>
+							</g>
+						</g>
+					</svg>
+                        <span class="js-au-youtube-likes"></span>
+                    </div>
+
+                    <div class="au-youtube-info__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 404.941 404.941" style="enable-background:new 0 0 404.941 404.941;" xml:space="preserve">
+						<g id="comments-icon">
+							<path d="M391.689,18.283H13.25C5.931,18.283,0,24.218,0,31.535v242.48c0,7.32,5.931,13.252,13.25,13.252h202.674v86.137   c0,5.359,3.228,10.193,8.18,12.244c1.64,0.68,3.361,1.01,5.068,1.01c3.446,0,6.838-1.348,9.372-3.883l96.171-95.508h56.975   c7.32,0,13.252-5.932,13.252-13.252V31.534C404.943,24.217,399.01,18.283,391.689,18.283L391.689,18.283z" fill="#FFFFFF"/>
+						</g>
+					</svg>
+                        <span class="js-au-youtube-comments"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="au-youtube-info__content">
+			<span class="au-youtube-info__heading h4">
+				Sollicitudin Aenean Tellus Cursus
+			</span>
+                <span class="au-youtube-info__text">
+				Donec sed odio dui. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum.
+			</span>
+            </div>
+
+        </div>
+
+    </div>
+</f:comment>

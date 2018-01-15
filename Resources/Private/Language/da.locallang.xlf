@@ -89,7 +89,19 @@
             </trans-unit>
             <trans-unit id="carousel.colourstyle.9">
                 <source>colourstyle.9</source>
-                <target>Grå</target>
+                <target>Hvid</target>
+            </trans-unit>
+            <trans-unit id="video.colourstyle">
+                <source>Choose color style for text box</source>
+                <target>Vælg farvetema for tekstkasse</target>
+            </trans-unit>
+            <trans-unit id="video.colourstyle.0">
+                <source>Blue BG - White text</source>
+                <target>Blå BG - Hvid tekst</target>
+            </trans-unit>
+            <trans-unit id="video.colourstyle.1">
+                <source>White BG - Black/Grey text</source>
+                <target>Hvid BG - Grålig tekst</target>
             </trans-unit>
             <trans-unit id="content_element.videotitle">
                 <source>Dycon Video Stream</source>
